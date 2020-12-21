@@ -23,4 +23,20 @@ public class FileScanUtils {
 
         return inputs;
     }
+
+    public static String[] getArrays(String filePath) throws FileNotFoundException {
+        List<String> inputs = new ArrayList<>();
+        File file = new File(filePath);
+
+        //스캐너로 파일 읽기
+        Scanner scan = new Scanner(file);
+        while (scan.hasNextLine()) {
+            inputs.add(scan.nextLine());
+        }
+
+        String[] arrays = new String[inputs.size()];
+        inputs.toArray(arrays);
+
+        return arrays;
+    }
 }
