@@ -1,32 +1,22 @@
 package com.heedi.hackerrank.easy;
 
+import com.heedi.hackerrank.utils.FileScanUtils;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class ValidUserNameRegularExpressionTest {
 
     @Test
     void test() throws FileNotFoundException {
-        List<String> userNames
-                = Arrays.asList("J_liaJuliaJuliaJuliaJuliaJulia", "Julia", "Samantha", "Samantha_21", "1Samantha", "Samantha?10_2A", "q1222321", "SDkdlkwdsadsdasdsadasdad_was");
-//        List<String> userNames = new ArrayList<>();
+//        List<String> userNames
+//                = Arrays.asList("J_liaJuliaJuliaJuliaJuliaJulia", "Julia", "Samantha", "Samantha_21", "1Samantha", "Samantha?10_2A", "q1222321", "SDkdlkwdsadsdasdsadasdad_was");
 
-//        File file = new File("src/test/java/com/heedi/hackerrank/resources/easy/ValidUserNameInput01.txt");
-//
-//        //스캐너로 파일 읽기
-//        Scanner scan = new Scanner(file);
-//        while (scan.hasNextLine()) {
-//            userNames.add(scan.nextLine());
-//        }
-//
-//        String[] array = new String[userNames.size()];
-//        userNames.toArray(array);
+        // input 파일 읽어오기
+        String filePath = "src/test/java/com/heedi/hackerrank/resources/easy/ValidUserNameInput01.txt";
+        List<String> userNames = FileScanUtils.getList(filePath);
 
         for (String userName : userNames) {
             if (userName.matches(UsernameValidator.regularExpression)) {
