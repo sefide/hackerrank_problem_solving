@@ -15,7 +15,7 @@ public class BigSortingTest {
     @Test
     void test() throws FileNotFoundException {
         List<String> test = new ArrayList<>();
-        File file = new File("src/test/java/com/heedi/hackerrank/easy/BigSortingInput01.txt");
+        File file = new File("src/test/java/com/heedi/hackerrank/resources/easy/BigSortingInput01.txt");
         //스캐너로 파일 읽기
         Scanner scan = new Scanner(file);
         while (scan.hasNextLine()) {

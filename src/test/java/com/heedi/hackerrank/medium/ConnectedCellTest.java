@@ -16,7 +16,7 @@ public class ConnectedCellTest {
     @Test
     void test() throws FileNotFoundException {
         List<String> test = new ArrayList<>();
-        File file = new File("src/test/java/com/heedi/hackerrank/medium/ConnectedCellInput01.txt");
+        File file = new File("src/test/java/com/heedi/hackerrank/resources/medium/ConnectedCellInput01.txt");
         //스캐너로 파일 읽기
 
         Scanner scanner = new Scanner(file);

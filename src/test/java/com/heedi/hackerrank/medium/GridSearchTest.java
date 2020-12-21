@@ -16,7 +16,7 @@ public class GridSearchTest {
     @Test
     void test() throws FileNotFoundException {
         List<String> test = new ArrayList<>();
-        File file = new File("src/test/java/com/heedi/hackerrank/medium/GridSearchInput01.txt");
+        File file = new File("src/test/java/com/heedi/hackerrank/resources/medium/GridSearchInput01.txt");
         //스캐너로 파일 읽기
         Scanner scanner = new Scanner(file);
 

@@ -13,7 +13,7 @@ public class FullCountingSortTest {
     void test() throws IOException {
         List<List<String>> arr = new ArrayList<>();
 
-        File file = new File("src/test/java/com/heedi/hackerrank/medium/FullCountingSortInput01.txt");
+        File file = new File("src/test/java/com/heedi/hackerrank/resources/medium/FullCountingSortInput01.txt");
         //스캐너로 파일 읽기
         Scanner scan = new Scanner(file);
 
