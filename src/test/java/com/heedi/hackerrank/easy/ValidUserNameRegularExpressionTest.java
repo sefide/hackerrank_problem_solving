@@ -49,4 +49,14 @@ class UsernameValidator {
      * Write regular expression here.
      */
     public static final String regularExpression = "^[a-zA-Z][a-zA-Z_0-9]{7,29}";
+    /*
+        Discussion answer : "^[aA-zZ]\\w{7,29}$"
+
+        \w = [a-zA-Z_0-9] : 영문 소대문자, 숫자, underScore(_) 가능
+        [aA-zZ] = [a-zA-Z]
+        ^ : 행의 시작
+        $ : 행의 끝
+        {n, m} : 글자 수 n 이상 m 이
+     */
+
 }
