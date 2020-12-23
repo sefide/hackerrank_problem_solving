@@ -26,15 +26,8 @@ public class GradingStudentTest {
     }
 
     private static Integer getResult(int grade) {
-        if(grade < 38) {
-            return grade;
-        }
-
         int remainder = grade % 5;
-        if(remainder < 3) {
-            return grade;
-        }
 
-        return grade + 5 - (remainder);
+        return grade < 38 || remainder < 3? grade : grade + 5 - (remainder);
     }
 }
