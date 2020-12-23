@@ -30,10 +30,11 @@ public class GradingStudentTest {
             return grade;
         }
 
-        double t = grade / 5.0;
-        if(t - (int)(t) > 0.5) {
-            return (int) Math.round(t) * 5;
+        int remainder = grade % 5;
+        if(remainder < 3) {
+            return grade;
         }
-        return grade;
+
+        return grade + 5 - (remainder);
     }
 }
