@@ -2,6 +2,9 @@ package com.heedi.hackerrank.easy;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * https://www.hackerrank.com/challenges/apple-and-orange/problem
+ */
 public class AppleAndOrangeTest {
     @Test
     void test() {
