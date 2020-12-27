@@ -17,7 +17,8 @@ public class BetweenTwoSetsTest {
         System.out.println(getTotalX(a, b));
     }
 
-    // 지저분한 for문 중복... !!!!
+    // 지저분한 for문 중복 해결 필요
+    // JS 경우, every()로 간단하게 해결 가능
     public static int getTotalX(List<Integer> a, List<Integer> b) {
         int result = 0;
 
