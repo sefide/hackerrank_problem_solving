@@ -2,8 +2,6 @@ package com.heedi.hackerrank.easy;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.function.Function;
-
 /**
  * https://www.hackerrank.com/challenges/kangaroo/problem?h_r=next-challenge&h_v=zen
  * kangaroo
@@ -22,7 +20,7 @@ public class NumberLineJumpTest {
     }
 
     /*
-        find.. (수학적으로 접근하기)
+        think.. (수학적으로 접근하기)
         x1 + (jump * v1) == x2 + (jump * v2)
         x1 - x2 = jump * (v2 - v1)
         1 = jump(v2 - v1)/(x1 - x2)
@@ -35,7 +33,6 @@ public class NumberLineJumpTest {
         if(v1 <= v2) {
             return "NO";
         }
-//        int jump = (x1 - x2)/(v2 - v1);
 
         int namuji = (x1 - x2) % (v2 - v1);
         return namuji == 0 ? "YES" : "NO";
