@@ -21,36 +21,24 @@ public class NumberLineJumpTest {
         System.out.println(kangaroo(x1, v1, x2, v2));
     }
 
-    // Test case 10 Time limit exceeded
+    /*
+        find.. (수학적으로 접근하기)
+        x1 + (jump * v1) == x2 + (jump * v2)
+        x1 - x2 = jump * (v2 - v1)
+        1 = jump(v2 - v1)/(x1 - x2)
+        jump = (x1 - x2)/(v2 - v1)
+
+        jump가 정수가 나와야한다. 따라서 아래 조건을 만족한다면 됨.. !!!!
+        (x1 - x2) % (v2 - v1) == 0
+     */
     static String kangaroo(int x1, int v1, int x2, int v2) {
-        if(x1 < x2 && v1 < v2) {
+        if(v1 <= v2) {
             return "NO";
         }
-        // x1, x2
-        int d1 = x1;
-        int d2 = x2;
-        int jump = 1;
+//        int jump = (x1 - x2)/(v2 - v1);
 
-        if(d1 < d2) {
-            while (d1 < d2) {
-                d1 += (jump * v1);
-                d2 += (jump * v2);
-            }
-            if(d1 == d2) {
-                return "YES";
-            }
-        } else {
-            while (d1 > d2) {
-                d1 = x1 + (jump * v1);
-                d2 = x2 + (jump * v2);
-            }
-            if(d1 == d2) {
-                return "YES";
-            }
-        }
-
-
-        return "NO";
+        int namuji = (x1 - x2) % (v2 - v1);
+        return namuji == 0 ? "YES" : "NO";
     }
 
 }
