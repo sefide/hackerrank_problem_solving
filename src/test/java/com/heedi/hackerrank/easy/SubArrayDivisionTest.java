@@ -22,8 +22,6 @@ public class SubArrayDivisionTest {
     static int birthday(List<Integer> s, int d, int m) {
         int result = 0;
 
-        // d = 함
-        // m 연속 개수
         if (s.size() == 1) {
             return s.get(0) == d ? 1 : 0;
         }
