@@ -22,10 +22,6 @@ public class SubArrayDivisionTest {
     static int birthday(List<Integer> s, int d, int m) {
         int result = 0;
 
-        if (s.size() == 1) {
-            return s.get(0) == d ? 1 : 0;
-        }
-
         for (int i = 0; i <= s.size() - m; i++) {
             int sum = 0;
             for (int j = i; j < i + m; j++) {
