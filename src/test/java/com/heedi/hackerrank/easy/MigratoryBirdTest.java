@@ -3,6 +3,7 @@ package com.heedi.hackerrank.easy;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -23,12 +24,12 @@ public class MigratoryBirdTest {
     }
 
     static int migratoryBirds(List<Integer> arr) {
-        int maxKey = 0;
-        long max = 0;
-
         Map<Integer, Long> map = arr.stream()
                 .collect(groupingBy(Function.identity(), Collectors.counting()));
 
+        /*
+        int maxKey = 0;
+        long max = 0;
         for (Integer key : map.keySet()) {
             long count = map.get(key);
 
@@ -37,7 +38,9 @@ public class MigratoryBirdTest {
                 max = count;
             }
         }
+        */
 
-        return maxKey;
+        return Collections.max(map.entrySet(), Map.Entry.comparingByValue())
+                .getKey();
     }
 }
