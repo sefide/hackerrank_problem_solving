@@ -19,6 +19,7 @@ public class DayOfTheProgrammerTest {
         String month = "09";
         String day;
 
+        // TODO : 1918년도는 뭔가 다름 .. !! 원인 알아내기
         if ((year <= 1917 && year % 4 == 0) || (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
             day = "12";
         } else {
