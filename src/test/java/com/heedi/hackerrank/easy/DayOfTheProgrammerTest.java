@@ -21,6 +21,7 @@ public class DayOfTheProgrammerTest {
         int day;
 
         // The transition from the Julian to Gregorian calendar system occurred in 1918
+        // In 1918, February 14th was the 32nd day of the year..
         if(year == 1918) {
             day = 26;
         } else if ((year <= 1917 && year % 4 == 0) || (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
