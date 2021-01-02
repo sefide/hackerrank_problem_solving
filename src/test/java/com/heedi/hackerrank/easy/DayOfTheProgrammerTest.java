@@ -16,17 +16,19 @@ public class DayOfTheProgrammerTest {
     }
 
     static String dayOfProgrammer(int year) {
-        String month = "09";
-        String day;
+        String format = "%02d.%02d.%d";
+        int month = 9;
+        int day;
 
-        // TODO : 1918년도는 뭔가 다름 .. !! 원인 알아내기
-        if ((year <= 1917 && year % 4 == 0) || (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-            day = "12";
+        // The transition from the Julian to Gregorian calendar system occurred in 1918
+        if(year == 1918) {
+            day = 26;
+        } else if ((year <= 1917 && year % 4 == 0) || (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+            day = 12;
         } else {
-            day = "13";
+            day = 13;
         }
 
-        String format = "%s.%s.%s";
-        return String.format(format, month, day, year);
+        return String.format(format, day, month, year);
     }
 }
