@@ -6,6 +6,6 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 - Easy, Medium, Hard 난이도 별로 패키징 (아직 Medium까지만 진행)
 
 #### 현재 score
-- Rank: 172765
-- Points: 748.67/850
-- 4 star (73%)
+- Rank: 142154
+- Points: 873.67/2200
+- 5 star (2%)
