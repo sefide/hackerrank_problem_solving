@@ -16,10 +16,6 @@ public class DrawingBookTest {
     }
 
     static int pageCount(int n, int p) {
-        if (n / 2 >= p) {
-            return p / 2;
-        } else {
-            return n / 2 - p / 2;
-        }
+        return Math.min(p / 2, n / 2 - p / 2);
     }
 }
