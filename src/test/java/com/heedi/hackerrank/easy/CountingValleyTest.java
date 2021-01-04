@@ -3,7 +3,7 @@ package com.heedi.hackerrank.easy;
 import org.junit.jupiter.api.Test;
 
 /**
- *
+ * https://www.hackerrank.com/challenges/counting-valleys/problem
  */
 public class CountingValleyTest {
 
@@ -11,7 +11,7 @@ public class CountingValleyTest {
     void test() {
         int steps = 12;
         String path = "DDUUDDUDUUUD";
-        System.out.println(countingValleys(steps, path));
+        System.out.println(countingValleys(steps, path)); // 3
     }
 
     public static int countingValleys(int steps, String path) {
