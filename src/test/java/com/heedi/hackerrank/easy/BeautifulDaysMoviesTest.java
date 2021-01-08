@@ -24,7 +24,7 @@ public class BeautifulDaysMoviesTest {
             stringBuffer.append(number);
             int reverse = Integer.parseInt(stringBuffer.reverse().toString());
 
-            if (((number - reverse) / (double)k) == (number - reverse) / k) {
+            if ((number - reverse) % k == 0 ) {
                 result++;
             }
         }
