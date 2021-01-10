@@ -14,18 +14,7 @@ public class SaveThePrisonerTest {
     }
 
     static int saveThePrisoner(int n, int m, int s) {
-        int left = m % n;
-
-        int position;
-        if(left == 0) {
-            position = s + n;
-        } else {
-            position = s + left - 1;
-        }
-        return position > n ? Math.abs(n - position) : position;
-
-        // 12345;
-        // 절대 5 - (3 + 3)
+        return ((s - 1) + (m - 1)) % n + 1;
     }
 
 }
