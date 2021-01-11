@@ -2,6 +2,9 @@ package com.heedi.hackerrank.problem_solving.easy;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * https://www.hackerrank.com/challenges/save-the-prisoner/problem
+ */
 public class SaveThePrisonerTest {
 
     @Test
