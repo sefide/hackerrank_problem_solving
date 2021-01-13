@@ -21,9 +21,7 @@ public class JumpingOnTheCloudsTest {
         int e = 100;
 
         do {
-            int r = c[(i + k) % n];
-
-            e -= r * 2 + 1;
+            e -= (c[(i + k) % n] * 2) + 1;
             i = (i + k) % n;
         } while (i != 0);
 
