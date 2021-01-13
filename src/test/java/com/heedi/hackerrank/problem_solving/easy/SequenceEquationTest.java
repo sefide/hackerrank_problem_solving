@@ -2,7 +2,6 @@ package com.heedi.hackerrank.problem_solving.easy;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,8 +26,8 @@ public class SequenceEquationTest {
 
         for (int i = 1; i <= p.length; i++) {
             int t = list.indexOf(i);
-            int r = list.indexOf(t);
-            result[i - 1] = r;
+            int r = list.indexOf(t + 1);
+            result[i - 1] = r + 1;
         }
         return result;
     }
