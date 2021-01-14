@@ -2,11 +2,6 @@ package com.heedi.hackerrank.problem_solving.easy;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * https://www.hackerrank.com/challenges/find-digits/problem
  */
