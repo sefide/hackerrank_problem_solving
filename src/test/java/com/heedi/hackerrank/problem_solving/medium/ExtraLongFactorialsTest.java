@@ -3,6 +3,7 @@ package com.heedi.hackerrank.problem_solving.medium;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * https://www.hackerrank.com/challenges/extra-long-factorials/problem
@@ -17,16 +18,21 @@ public class ExtraLongFactorialsTest {
     }
 
     static void extraLongFactorials(int n) {
-        BigDecimal result = factorials(n);
+        BigInteger result = factorials(n);
 
         System.out.println(result);
     }
 
-    private static BigDecimal factorials(int n) {
+    private static BigInteger factorials(int n) {
         if (n == 1) {
-            return new BigDecimal(1);
+            return BigInteger.valueOf(1);
         }
 
-        return BigDecimal.valueOf(n).multiply(factorials(n - 1));
+        return BigInteger.valueOf(n).multiply(factorials(n - 1));
     }
+
+    /*
+    BigDecimal : Immutable, arbitrary-precision signed decimal numbers
+    BigInteger : Immutable arbitrary-precision integers
+     */
 }
