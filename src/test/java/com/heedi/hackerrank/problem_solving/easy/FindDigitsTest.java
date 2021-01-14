@@ -17,7 +17,7 @@ public class FindDigitsTest {
         return (int) String.valueOf(n)
                 .chars()
                 .boxed()
-                .distinct()
+                .map(i -> i - 48)
                 .filter(i -> i != 0 && n % i == 0)
                 .count();
     }
