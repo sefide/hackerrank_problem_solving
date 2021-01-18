@@ -3,6 +3,10 @@ package com.heedi.hackerrank.problem_solving.medium;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.groupingBy;
 
 /**
  * https://www.hackerrank.com/challenges/non-divisible-subset/problem
@@ -11,33 +15,35 @@ public class NonDivisibleSubsetTest {
 
     @Test
     void test() {
-        int k = 3;
-        List<Integer> s = Arrays.asList(1, 2, 4, 7);
+        int k = 13;
+        List<Integer> s = Arrays.asList(2375782, 21836421, 2139842193, 2138723, 23816, 21836219, 2948784, 43864923, 283648327, 23874673);
 
         System.out.println(nonDivisibleSubset(k, s));
     }
 
     public static int nonDivisibleSubset(int k, List<Integer> s) {
-        Map<Integer, Integer> remainders = new HashMap<>();
-
-        for (int i : s) {
-            remainders.put(i % k, remainders.get(i % k) != null ? remainders.get(i % k) + 1 : 1);
+        if (k == 1) {
+            return 1;
         }
+        Map<Integer, Long> remainders = s.stream()
+                .map(i -> i % k)
+                .collect(groupingBy(Function.identity(), Collectors.counting()));
 
         Set<Integer> removed = new HashSet<>();
-        for (int r : remainders.keySet()) {
+        for (int r : remainders.keySet().stream().filter(i -> i <= k / 2).collect(Collectors.toList())) {
             int l = k - r;
-            if (remainders.get(l) != null) {
+            if (remainders.get(l) != null && r != l) {
                 int remove = Math.min(remainders.get(l), remainders.get(r)) == remainders.get(l) ? l : r;
                 removed.add(remove);
             }
         }
 
-        return remainders.keySet()
+        return Integer.parseInt(remainders.keySet()
                 .stream()
                 .filter(i -> !removed.contains(i))
                 .map(remainders::get)
-                .reduce(0, Integer::sum);
+                .reduce(0L, Long::sum)
+                .toString());
     }
 
     /*
