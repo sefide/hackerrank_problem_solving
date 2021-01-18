@@ -47,15 +47,6 @@ public class CutTheStickTest {
         return convertListToArray(list);
     }
 
-    private static int[] convertListToArray(List<Integer> list) {
-        int[] result = new int[list.size()];
-
-        for (int i = 0; i < list.size(); i++) {
-            result[i] = list.get(i);
-        }
-        return result;
-    }
-
     static int[] cutTheSticksUsingLength(int[] arr) {
         List<Integer> list = new ArrayList<>();
         Arrays.sort(arr);
@@ -68,6 +59,15 @@ public class CutTheStickTest {
         }
 
         return convertListToArray(list);
+    }
+
+    private static int[] convertListToArray(List<Integer> list) {
+        int[] result = new int[list.size()];
+
+        for (int i = 0; i < list.size(); i++) {
+            result[i] = list.get(i);
+        }
+        return result;
     }
 
 }
