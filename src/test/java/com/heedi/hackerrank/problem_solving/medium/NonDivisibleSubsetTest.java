@@ -21,6 +21,7 @@ public class NonDivisibleSubsetTest {
         System.out.println(nonDivisibleSubset(k, s));
     }
 
+    // TODO : fix
     public static int nonDivisibleSubset(int k, List<Integer> s) {
         if (k == 1) {
             return 1;
