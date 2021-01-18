@@ -30,11 +30,13 @@ public class NonDivisibleSubsetTest {
                 .collect(groupingBy(Function.identity(), Collectors.counting()));
 
         Set<Integer> removed = new HashSet<>();
-        for (int r : remainders.keySet().stream().filter(i -> i <= k / 2).collect(Collectors.toList())) {
+        for (int r : remainders.keySet()) {
             int l = k - r;
-            if (remainders.get(l) != null && r != l) {
+            if (remainders.get(l) != null) {
                 int remove = Math.min(remainders.get(l), remainders.get(r)) == remainders.get(l) ? l : r;
-                removed.add(remove);
+                if (!removed.contains(k - remove)) {
+                    removed.add(remove);
+                }
             }
         }
 
