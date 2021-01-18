@@ -13,7 +13,7 @@ public class CutTheStickTest {
 
     @Test
     void test() {
-        int[] arr = {5, 4, 4, 2, 2, 8};
+        int[] arr = {3,3,3};
         int[] result = cutTheSticks(arr);
 
         System.out.println(Arrays.toString(result));
@@ -26,7 +26,7 @@ public class CutTheStickTest {
         list.add(r);
         Arrays.sort(arr);
         int minIndex = 0;
-        while (r != 1) {
+        while (r > 1) {
             int min = arr[minIndex];
 
             for (int i = 0; i < arr.length; i++) {
@@ -36,7 +36,10 @@ public class CutTheStickTest {
                     minIndex++;
                 }
             }
-            list.add(r);
+
+            if(r != 0) {
+                list.add(r);
+            }
         }
 
         int[] result = new int[list.size()];
