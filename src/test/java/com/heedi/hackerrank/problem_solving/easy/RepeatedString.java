@@ -9,7 +9,7 @@ public class RepeatedString {
 
     @Test
     void test() {
-        String s = "a";
+        String s = "aaa";
         long n = 1000000000000L;
 
         System.out.println(repeatedString(s, n));
@@ -24,7 +24,7 @@ public class RepeatedString {
         result += mock * filteredS.length();
 
         if(namugi != 0) {
-            String filteredAS = s.substring(0, namugi + 1).replaceAll("[^a]", "");
+            String filteredAS = s.substring(0, namugi).replaceAll("[^a]", "");
             result += filteredAS.length();
         }
 
