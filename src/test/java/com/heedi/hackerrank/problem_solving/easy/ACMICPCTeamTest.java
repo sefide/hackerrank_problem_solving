@@ -24,12 +24,12 @@ public class ACMICPCTeamTest {
 
         for (int i = 0; i < topic.length - 1; i++) {
             for (int j = i + 1; j < topic.length; j++) {
-                BigInteger binaryToDecimal1 = BigInteger.valueOf(Integer.parseInt(topic[i], 2));
-                BigInteger binaryToDecimal2 = BigInteger.valueOf(Integer.parseInt(topic[j], 2));
-
-                BigInteger bigInteger = binaryToDecimal1.or(binaryToDecimal2);
-                int oneCount = bigInteger.bitCount();;
-
+                int oneCount = 0;
+                for (int k = 0; k < topic[i].length(); k++) {
+                    if (topic[i].charAt(k) == '1' || topic[j].charAt(k) == '1') {
+                        oneCount++;
+                    }
+                }
                 if (oneCount > max) {
                     max = oneCount;
                     count = 1;
