@@ -2,6 +2,7 @@ package com.heedi.hackerrank.problem_solving.easy;
 
 import org.junit.jupiter.api.Test;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 /**
@@ -22,18 +23,19 @@ public class ACMICPCTeamTest {
         int count = 0;
 
         for (int i = 0; i < topic.length - 1; i++) {
-            long binaryToDecimal1 = Integer.parseInt(topic[i], 2);
-            long binaryToDecimal2 = Integer.parseInt(topic[i + 1], 2);
+            for (int j = i + 1; j < topic.length; j++) {
+                BigInteger binaryToDecimal1 = BigInteger.valueOf(Integer.parseInt(topic[i], 2));
+                BigInteger binaryToDecimal2 = BigInteger.valueOf(Integer.parseInt(topic[j], 2));
 
-            long s = binaryToDecimal1 | binaryToDecimal2;
-            String binaryString = Long.toBinaryString(s);
-            int oneCount = binaryString.replaceAll("[^1]", "").length();
+                BigInteger bigInteger = binaryToDecimal1.or(binaryToDecimal2);
+                int oneCount = bigInteger.bitCount();;
 
-            if (oneCount > max) {
-                max = oneCount;
-                count = 1;
-            } else if (s == max) {
-                count++;
+                if (oneCount > max) {
+                    max = oneCount;
+                    count = 1;
+                } else if (oneCount == max) {
+                    count++;
+                }
             }
         }
 
