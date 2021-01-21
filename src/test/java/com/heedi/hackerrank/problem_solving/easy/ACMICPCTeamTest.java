@@ -17,10 +17,27 @@ public class ACMICPCTeamTest {
         System.out.println(Arrays.toString(result));
     }
 
-    // TODO
     static int[] acmTeam(String[] topic) {
+        int max = 0;
+        int count = 0;
 
-        return null;
+        for (int i = 0; i < topic.length - 1; i++) {
+            long binaryToDecimal1 = Integer.parseInt(topic[i], 2);
+            long binaryToDecimal2 = Integer.parseInt(topic[i + 1], 2);
+
+            long s = binaryToDecimal1 | binaryToDecimal2;
+            String binaryString = Long.toBinaryString(s);
+            int oneCount = binaryString.replaceAll("[^1]", "").length();
+
+            if (oneCount > max) {
+                max = oneCount;
+                count = 1;
+            } else if (s == max) {
+                count++;
+            }
+        }
+
+        return new int[]{max, count};
     }
 
 }
