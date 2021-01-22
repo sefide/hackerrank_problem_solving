@@ -3,6 +3,9 @@ package com.heedi.hackerrank.java.medium.big_decimal;
 import java.math.BigDecimal;
 import java.util.*;
 
+/**
+ * https://www.hackerrank.com/challenges/java-bigdecimal/problem
+ */
 public class Solution {
     public static void main(String[] args) {
         //Input
