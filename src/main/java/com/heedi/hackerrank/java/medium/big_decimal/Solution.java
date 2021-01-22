@@ -14,26 +14,16 @@ public class Solution {
         }
         sc.close();
 
-        BigDecimal max = new BigDecimal(s[0]);
-        int maxIndex = 0;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                BigDecimal b = new BigDecimal(s[j]);
-                if (max.compareTo(b) < 0) {
-                    max = b;
-                    maxIndex = j;
-                }
-
-                if (j == n - 1) {
-                    String temp = s[i];
-                    s[i] = s[maxIndex];
-                    s[maxIndex] = temp;
-
-                    max = new BigDecimal(s[i + 1]);
-                    maxIndex = i + 1;
-                }
+        Arrays.sort(s, (o1, o2) -> {
+            if(o1 == null || o2 == null) {
+                return 0;
             }
-        }
+
+            BigDecimal b1 = new BigDecimal(o1);
+            BigDecimal b2 = new BigDecimal(o2);
+
+            return b2.compareTo(b1);
+        });
 
         //Output
         for (int i = 0; i < n; i++) {
