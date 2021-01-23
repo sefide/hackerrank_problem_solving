@@ -53,7 +53,20 @@ class MyMath {
     }
 
     public PerformOperation isPalindrome() {
-        return null;
+        return this::judgePalindrome;
+    }
+
+    private boolean judgePalindrome(int a) {
+        String s = String.valueOf(a);
+        int length = s.length();
+
+        for (int i = 0; i <= Math.sqrt(length); i++) {
+            if(s.charAt(i)!= s.charAt(length - 1 - i)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
 
