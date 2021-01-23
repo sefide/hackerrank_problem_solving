@@ -43,8 +43,8 @@ class MyMath {
                 prime[i] = false;
                 return false;
             } else {
-                for (int j = i * i; j < prime.length; j++) {
-                    prime[j] = true;
+                for (int j = i; i * j < Math.sqrt(a); j++) {
+                    prime[i * j] = true;
                 }
             }
         }
