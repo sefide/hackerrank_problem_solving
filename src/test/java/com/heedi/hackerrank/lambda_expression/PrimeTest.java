@@ -2,20 +2,24 @@ package com.heedi.hackerrank.lambda_expression;
 
 import org.junit.jupiter.api.Test;
 
+import java.math.BigInteger;
+
 public class PrimeTest {
 
     @Test
     void isPrime() {
-        int a = 12;
+        int a = 27;
 
-        boolean isPrime = isPrime(a);
+        boolean isPrime1 = isPrime1(a);
+        System.out.println(a + " is " + (isPrime1 ? "PRIME" : "NOT PRIME"));
 
-        System.out.println(a + " is " + (isPrime ? "PRIME" : "NOT PRIME"));
+        boolean isPrime2 = isPrime2(a);
+        System.out.println(a + " is " + (isPrime2 ? "PRIME" : "NOT PRIME"));
     }
 
+    // 에라토스테네스의 체 ; Sieve of Eratosthenes
     private boolean[] prime;
-    // 에라토스테네스의 체
-    private boolean isPrime(int a) {
+    private boolean isPrime1(int a) {
         if (a < 2) {
             return true;
         }
@@ -32,13 +36,18 @@ public class PrimeTest {
                 prime[i] = false;
                 return false;
             } else {
-                for (int j = i * i; j < prime.length; j++) {
-                    prime[j] = true;
+                for (int j = i; i * j < Math.sqrt(a); j++) {
+                    prime[i * j] = true;
                 }
             }
         }
 
         return true;
+    }
+
+    // using BigInteger
+    private boolean isPrime2(int a) {
+        return BigInteger.valueOf(a).isProbablePrime(1);
     }
 
 }
