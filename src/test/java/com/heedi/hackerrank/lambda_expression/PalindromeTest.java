@@ -14,8 +14,12 @@ public class PalindromeTest {
 
         boolean isPalindrome2 = isPalindrome2(a);
         System.out.println(a + " is " + (isPalindrome2 ? "PALINDROME" : "NOT PALINDROME"));
+
+        boolean isPalindrome3 = isPalindrome3(a);
+        System.out.println(a + " is " + (isPalindrome3 ? "PALINDROME" : "NOT PALINDROME"));
     }
 
+    // compare
     private boolean isPalindrome1(int a) {
         String s = String.valueOf(a);
         int length = s.length();
@@ -29,7 +33,7 @@ public class PalindromeTest {
         return true;
     }
 
-    // 뒤집어 보는 방법
+    // reverse
     private boolean isPalindrome2(int a) {
         String s = String.valueOf(a);
         int length = s.length();
@@ -42,5 +46,10 @@ public class PalindromeTest {
         }
 
         return true;
+    }
+
+    // simple compare
+    private boolean isPalindrome3(int a) {
+        return Integer.toString(a).equals(new StringBuilder(Integer.toString(a)).reverse().toString());
     }
 }
