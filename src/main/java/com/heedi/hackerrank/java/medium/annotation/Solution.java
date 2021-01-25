@@ -16,6 +16,14 @@ import java.util.*;
     int budgetLimit() default 1;
 }
 
+/*
+    @Target : 해당 어노테이션이 어디에 사용할 수 있는지 결정 (FIELD, METHOD, CLASS, PARAMETER 등)
+    @Retention : 어느 시점까지 어노테이션의 메모리를 가져갈지 결정 (CLASS, RUNTIME, SOURCE)
+        CLASS(default) : 컴파일까지 메모리 보유하다 런타임 시 제거
+        RUNTIME : 컴파일 후 런타임 종료 시까지 메모리 보유
+        SOURCE : 컴파일할 때 제거
+ */
+
 class FamilyMember {
     @FamilyBudget(userRole = "SENIOR", budgetLimit = 100)
     public void seniorMember(int budget, int moneySpend) {
