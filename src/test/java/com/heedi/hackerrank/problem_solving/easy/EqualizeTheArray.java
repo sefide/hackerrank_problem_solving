@@ -3,6 +3,7 @@ package com.heedi.hackerrank.problem_solving.easy;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -22,18 +23,21 @@ public class EqualizeTheArray {
     }
 
     static int equalizeArray(int[] arr) {
-        Map<Integer, Long> counting = Arrays.stream(arr)
-                .boxed()
-                .collect(groupingBy(Function.identity(), Collectors.counting()));
+        Map<Integer, Integer> counting = new HashMap<>();
 
-        long max = 0;
-        for (int num: counting.keySet()) {
-            if(counting.get(num) > max) {
-                max = counting.get(num);
+        int max = 0;
+        for (int num : arr) {
+            int count = 1;
+
+            if (counting.containsKey(num)) {
+                count = counting.get(num) + 1;
             }
+
+            counting.put(num, count);
+            max = Math.max(count, max);
         }
 
-        return (int) (arr.length - max);
+        return arr.length - max;
     }
 
 }
