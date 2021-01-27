@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * https://www.hackerrank.com/challenges/minimum-loss/problem
+ */
 public class MinimumLossTest {
     @Test
     void test() {

@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem
+ */
 public class ConnectedCellTest {
 
     private int n;

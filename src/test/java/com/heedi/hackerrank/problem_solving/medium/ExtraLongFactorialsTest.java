@@ -2,7 +2,6 @@ package com.heedi.hackerrank.problem_solving.medium;
 
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 
 /**

@@ -8,6 +8,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/**
+ * https://www.hackerrank.com/challenges/countingsort4/problem
+ */
 public class FullCountingSortTest {
     @Test
     void test() throws IOException {

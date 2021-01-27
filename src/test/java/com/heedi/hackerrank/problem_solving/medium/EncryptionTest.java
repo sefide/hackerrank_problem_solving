@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://www.hackerrank.com/challenges/encryption/problem
+ */
 public class EncryptionTest {
 
     @Test

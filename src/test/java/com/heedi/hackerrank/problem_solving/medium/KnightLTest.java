@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
+/**
+ * https://www.hackerrank.com/challenges/knightl-on-chessboard/problem
+ */
 public class KnightLTest {
 
     @Test

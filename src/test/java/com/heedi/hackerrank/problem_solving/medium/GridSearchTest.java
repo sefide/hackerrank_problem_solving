@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * https://www.hackerrank.com/challenges/the-grid-search/problem
+ */
 public class GridSearchTest {
 
     static String[] G;

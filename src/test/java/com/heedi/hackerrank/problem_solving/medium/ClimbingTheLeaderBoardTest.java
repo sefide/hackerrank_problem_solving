@@ -7,6 +7,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * https://www.hackerrank.com/challenges/climbing-the-leaderboard
+ */
 public class ClimbingTheLeaderBoardTest {
     @Test
     void test() {

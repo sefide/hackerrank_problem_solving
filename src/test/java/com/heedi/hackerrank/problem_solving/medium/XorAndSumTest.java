@@ -2,6 +2,9 @@ package com.heedi.hackerrank.problem_solving.medium;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ *
+ */
 public class XorAndSumTest {
     @Test
     void test() {

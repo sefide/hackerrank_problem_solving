@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * https://www.hackerrank.com/challenges/pairs/problem
+ */
 public class PairsTest {
     @Test
     void test() {

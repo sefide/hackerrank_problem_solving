@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.counting;
 
+/**
+ * https://www.hackerrank.com/challenges/Bigger-Is-Greater/problem
+ */
 public class BiggerIsGreaterTest {
     private static final String NO_ANSWER = "no answer";
     private static final int MAX = 'z';
