@@ -65,8 +65,8 @@ public class QueensAttackTest {
             @Override
             public int getAttackCount(int n, int r_q, int c_q, List<Set> obstacles) {
                 for (int i = c_q + 1; i <= n; i++) {
-                    if (obstacles.contains(new Set(i, c_q))) {
-                        return n - i;
+                    if (obstacles.contains(new Set(r_q, i))) {
+                        return i - c_q - 1;
                     }
                 }
                 return n - c_q;
@@ -76,7 +76,7 @@ public class QueensAttackTest {
             @Override
             public int getAttackCount(int n, int r_q, int c_q, List<Set> obstacles) {
                 for (int i = c_q - 1; i > 0; i--) {
-                    if (obstacles.contains(new Set(i, c_q))) {
+                    if (obstacles.contains(new Set(r_q, i))) {
                         return c_q - i - 1;
                     }
                 }
@@ -86,23 +86,27 @@ public class QueensAttackTest {
         TOP_LEFT {
             @Override
             public int getAttackCount(int n, int r_q, int c_q, List<Set> obstacles) {
+                int max = 0;
                 for (int i = 1; (r_q + i <= n) && (c_q - i > 0); i++) {
                     if (obstacles.contains(new Set(r_q + i, c_q - i))) {
                         return i - 1;
                     }
+                    max = i;
                 }
-                return n - r_q;
+                return max;
             }
         },
         TOP_RIGHT {
             @Override
             public int getAttackCount(int n, int r_q, int c_q, List<Set> obstacles) {
+                int max = 0;
                 for (int i = 1; (i + r_q <= n) && (i + c_q <= n); i++) {
                     if (obstacles.contains(new Set(r_q + i, c_q + i))) {
                         return i - 1;
                     }
+                    max = i;
                 }
-                return n - r_q;
+                return max;
             }
         },
         TOP {
@@ -130,23 +134,27 @@ public class QueensAttackTest {
         DOWN_LEFT {
             @Override
             public int getAttackCount(int n, int r_q, int c_q, List<Set> obstacles) {
+                int max = 0;
                 for (int i = 1; (r_q - i > 0) && (c_q - i > 0); i++) {
                     if (obstacles.contains(new Set(r_q - i, c_q - i))) {
                         return i - 1;
                     }
+                    max = i;
                 }
-                return c_q - 1;
+                return max;
             }
         },
         DOWN_RIGHT {
             @Override
             public int getAttackCount(int n, int r_q, int c_q, List<Set> obstacles) {
+                int max = 0;
                 for (int i = 1; (r_q - i > 0) && (c_q + i <= n); i++) {
                     if (obstacles.contains(new Set(r_q - i, c_q + i))) {
                         return i - 1;
                     }
+                    max = i;
                 }
-                return n - c_q;
+                return max;
             }
         };
 
