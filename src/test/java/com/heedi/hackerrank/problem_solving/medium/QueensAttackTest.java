@@ -30,7 +30,84 @@ public class QueensAttackTest {
         );
     }
 
+    // (O(k))
     static int queensAttack(int n, int k, int r_q, int c_q, int[][] obstacles) {
+        int rObstacle = -1;
+        int lObstacle = -1;
+        int tlRObstacle = -1;
+        int tlCObstacle = -1;
+        int trRObstacle = -1;
+        int trCObstacle = -1;
+        int tObstacle = -1;
+        int dObstacle = -1;
+        int dlRObstacle = -1;
+        int dlCObstacle = -1;
+        int drRObstacle = -1;
+        int drCObstacle = -1;
+
+        int count = 0;
+        for (int i = 0; i < k; i++) {
+            int[] obstacle = obstacles[i];
+
+            int r = obstacle[0];
+            int c = obstacle[1];
+
+            // RIGHT
+            if ((r == r_q && c > c_q) && (rObstacle == -1 || rObstacle > c)) {
+                rObstacle = c;
+//                count +=  c - c_q - 1;
+            }
+            // LEFT
+            if ((r == r_q && c < c_q) && (lObstacle == -1 || lObstacle < c)) {
+                lObstacle = c;
+            }
+
+            // TOP LEFT
+            if (r - r_q == c_q - c && r > r_q) {
+                if(tlRObstacle == -1 || tlRObstacle > r) {
+                    tlRObstacle = r;
+                    tlCObstacle = c;
+                }
+            }
+            // TOP RIGHT
+            if (r - r_q == c - c_q && r > r_q) {
+                if(trRObstacle == -1 || trRObstacle > r) {
+                    trRObstacle = r;
+                    trCObstacle = c;
+                }
+            }
+
+            // TOP
+            if ((r > r_q && c == c_q) && (tObstacle == -1 || tObstacle > r)) {
+                tObstacle = r;
+            }
+            // DOWN
+            if ((r < r_q && c == c_q) && (dObstacle == -1 || dObstacle < r)) {
+                dObstacle = r;
+            }
+
+            // DOWN LEFT
+            if (r_q - r == c_q - c && r < r_q) {
+                if(dlCObstacle == -1 || dlCObstacle < c) {
+                    dlRObstacle = r;
+                    dlCObstacle = c;
+                }
+            }
+            // DOWN RIGHT
+            if (r_q - r == c - c_q && r < r_q) {
+                if(drCObstacle == -1 || drCObstacle < c) {
+                    drRObstacle = r;
+                    drCObstacle = c;
+                }
+            }
+
+        }
+
+        return count;
+    }
+
+    // 아까워서 못지우겠는 나의 정성어린 비효율 코드 (O(n))
+    static int queensAttackTimeOver(int n, int k, int r_q, int c_q, int[][] obstacles) {
         List<Set> obstacleList = Arrays.stream(obstacles)
                 .map(obstacle -> new Set(obstacle[0], obstacle[1]))
                 .collect(Collectors.toList());
