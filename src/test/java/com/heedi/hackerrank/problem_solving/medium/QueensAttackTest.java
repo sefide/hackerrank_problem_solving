@@ -87,14 +87,14 @@ public class QueensAttackTest {
 
             // DOWN LEFT
             if (r_q - r == c_q - c && r < r_q) {
-                if (dlCObstacle == -1 || dlCObstacle < c) {
+                if (dlRObstacle == -1 || dlRObstacle < r) {
                     dlRObstacle = r;
                     dlCObstacle = c;
                 }
             }
             // DOWN RIGHT
             if (r_q - r == c - c_q && r < r_q) {
-                if (drCObstacle == -1 || drCObstacle < c) {
+                if (drRObstacle == -1 || drRObstacle < r) {
                     drRObstacle = r;
                     drCObstacle = c;
                 }
@@ -111,8 +111,8 @@ public class QueensAttackTest {
         count += tObstacle != -1 ? tObstacle - r_q - 1 : n - r_q;
         count += dObstacle != -1 ? r_q - dObstacle - 1 : r_q - 1;
 
-        count += dlCObstacle != -1 ? c_q - dlCObstacle - 1 : Math.min(r_q - 1, c_q - 1); // DL
-        count += drCObstacle != -1 ? c_q - drCObstacle - 1 : Math.min(r_q - 1, n - c_q); // DR
+        count += dlCObstacle != -1 ? r_q - dlRObstacle - 1 : Math.min(r_q - 1, c_q - 1); // DL
+        count += drCObstacle != -1 ? r_q - drRObstacle - 1 : Math.min(r_q - 1, n - c_q); // DR
 
         return count;
     }
