@@ -55,7 +55,6 @@ public class QueensAttackTest {
             // RIGHT
             if ((r == r_q && c > c_q) && (rObstacle == -1 || rObstacle > c)) {
                 rObstacle = c;
-//                count +=  c - c_q - 1;
             }
             // LEFT
             if ((r == r_q && c < c_q) && (lObstacle == -1 || lObstacle < c)) {
@@ -64,14 +63,14 @@ public class QueensAttackTest {
 
             // TOP LEFT
             if (r - r_q == c_q - c && r > r_q) {
-                if(tlRObstacle == -1 || tlRObstacle > r) {
+                if (tlRObstacle == -1 || tlRObstacle > r) {
                     tlRObstacle = r;
                     tlCObstacle = c;
                 }
             }
             // TOP RIGHT
             if (r - r_q == c - c_q && r > r_q) {
-                if(trRObstacle == -1 || trRObstacle > r) {
+                if (trRObstacle == -1 || trRObstacle > r) {
                     trRObstacle = r;
                     trCObstacle = c;
                 }
@@ -88,20 +87,32 @@ public class QueensAttackTest {
 
             // DOWN LEFT
             if (r_q - r == c_q - c && r < r_q) {
-                if(dlCObstacle == -1 || dlCObstacle < c) {
+                if (dlCObstacle == -1 || dlCObstacle < c) {
                     dlRObstacle = r;
                     dlCObstacle = c;
                 }
             }
             // DOWN RIGHT
             if (r_q - r == c - c_q && r < r_q) {
-                if(drCObstacle == -1 || drCObstacle < c) {
+                if (drCObstacle == -1 || drCObstacle < c) {
                     drRObstacle = r;
                     drCObstacle = c;
                 }
             }
 
         }
+
+        count += rObstacle != -1 ? rObstacle - c_q - 1 : n - c_q;
+        count += lObstacle != -1 ? c_q - lObstacle - 1 : c_q - 1;
+
+        count += tlRObstacle != -1 ? tlRObstacle - r_q - 1 : Math.min(c_q - 1, n - r_q); // TL
+        count += trRObstacle != -1 ? trRObstacle - r_q - 1 : Math.min(n - c_q, n - r_q); // TR
+
+        count += tObstacle != -1 ? tObstacle - r_q - 1 : n - r_q;
+        count += dObstacle != -1 ? r_q - dObstacle - 1 : r_q - 1;
+
+        count += dlCObstacle != -1 ? c_q - dlCObstacle - 1 : Math.min(r_q - 1, c_q - 1); // DL
+        count += drCObstacle != -1 ? c_q - drCObstacle - 1 : Math.min(r_q - 1, n - c_q); // DR
 
         return count;
     }
