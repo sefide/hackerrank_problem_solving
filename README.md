@@ -28,7 +28,7 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 ### Problem Solving
 #### easy
 | challenge | score | success rate | solution | 
-|---|:---:|---:|
+|---|:---:|---:|---:|
 | ACM ICPC Team | 25 |  | [ACMICPCTeamTest](src/test/java/com/heedi/hackerrank/problem_solving/easy/ACMICPCTeamTest.java) |
 | Angry Professor | 20 |  | [AngryProfessorTest](src/test/java/com/heedi/hackerrank/problem_solving/easy/AngryProfessorTest.java) |
 | Append And Delete | 20 |  | [Append and Delete](src/test/java/com/heedi/hackerrank/problem_solving/easy/AppendAndDeleteTest.java) |
@@ -38,7 +38,7 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 
 #### medium
 | challenge | score | success rate | solution | 
-|---|:---:|---:|
+|---|:---:|---:|---:|
 | Bigger is Greater | 35 | 78.98% | [BiggerIsGreaterTest](src/test/java/com/heedi/hackerrank/problem_solving/medium/BiggerIsGreaterTest.java) |
 | Climbing the Leaderboard | 20 | 56.56% | [ClimbingTheLeaderBoardTest](src/test/java/com/heedi/hackerrank/problem_solving/medium/ClimbingTheLeaderBoardTest.java) |
 | Connected Cells in a Grid | 50 | 87.15% | [ConnectedCellTest](src/test/java/com/heedi/hackerrank/problem_solving/medium/ConnectedCellTest.java) |
