@@ -2,6 +2,9 @@ package com.heedi.hackerrank.java.medium.implements_interface;
 
 import java.util.Scanner;
 
+/**
+ * https://www.hackerrank.com/challenges/java-interface/problem
+ */
 public class Solution {
     public static void main(String []args){
         MyCalculator my_calculator = new MyCalculator();
