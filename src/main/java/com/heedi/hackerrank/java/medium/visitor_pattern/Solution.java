@@ -73,10 +73,11 @@ class TreeLeaf extends Tree {
     }
 }
 
-abstract class TreeVis
-{
+abstract class TreeVis {
     public abstract int getResult();
+
     public abstract void visitNode(TreeNode node);
+
     public abstract void visitLeaf(TreeLeaf leaf);
 
 }
@@ -136,7 +137,7 @@ public class Solution {
         sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
         int[] value = new int[n];
-        int[] color = new int[n];
+        Color[] color = new Color[n];
 
         String[] cItems = sc.nextLine().split(" ");
         sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
@@ -151,14 +152,32 @@ public class Solution {
 
         for (int i = 0; i < n; i++) {
             int cItem = Integer.parseInt(cItems[i]);
-            color[i] = cItem;
+
+            color[i] = cItem == 0 ? Color.RED : Color.GREEN;
         }
 
+        Map<String, List<String>> lines = new HashMap<>();
         for (int i = 0; i < n - 1; i++) {
-//            Tree tree = new TreeNode(value[i], color[i], )
-            System.out.println(sc.nextLine());
+            String[] line = sc.nextLine().split(" ");
+            List<String> edges;
+            if (lines.containsKey(line[0])) {
+                edges = lines.get(line[0]);
+            } else {
+               edges = new ArrayList<>();
+            }
+            edges.add(line[1]);
+            lines.put(line[0], edges);
         }
-        return null;
+
+        TreeNode root = new TreeNode(value[0], color[0], 0);
+        for (int i = 1; i < n ; i++) {
+            List<String> edges = lines.get(String.valueOf(value[i]));
+
+            int depth = edges.contains(String.valueOf(root.getValue())) ? 1 : 2;
+            TreeNode tree = new TreeNode(value[i], color[i], depth);
+            root.addChild(tree);
+        }
+        return root;
     }
 
 
