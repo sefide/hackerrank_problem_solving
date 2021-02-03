@@ -98,21 +98,25 @@ class SumInLeavesVisitor extends TreeVis {
 }
 
 class ProductOfRedNodesVisitor extends TreeVis {
+    private static int M = 1000000007;
     private int result = 1;
 
     public int getResult() {
         return result;
     }
 
+    /*
+    ProductRedNodesVisitor's getResult method must be computed modulo 10(9) + 7
+     */
     public void visitNode(TreeNode node) {
         if(node.getColor().equals(Color.RED)) {
-            result *= node.getValue();
+            result = (result * node.getValue()) % M;
         }
     }
 
     public void visitLeaf(TreeLeaf leaf) {
         if(leaf.getColor().equals(Color.RED)) {
-            result *= leaf.getValue();
+            result = (result * leaf.getValue()) % M;
         }
     }
 }
@@ -126,7 +130,7 @@ class FancyVisitor extends TreeVis {
     }
 
     public void visitNode(TreeNode node) {
-        if(node.getDepth() == 1) {
+        if(node.getDepth() % 2 == 1) {
             rootValue = node.getValue();
         }
     }
