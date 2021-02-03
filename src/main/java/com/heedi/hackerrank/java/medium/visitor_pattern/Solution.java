@@ -128,6 +128,9 @@ class FancyVisitor extends TreeVis {
 }
 
 public class Solution {
+    private static int[] value;
+    private static Color[] color;
+    private static Map<Integer, List<Integer>> lines;
 
     public static Tree solve() {
         //read the tree from STDIN and return its root as a return value of this function
@@ -136,15 +139,17 @@ public class Solution {
 
         sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        int[] value = new int[n];
-        Color[] color = new Color[n];
+        value = new int[n];
+        color = new Color[n];
+        lines = new HashMap<>();
 
         String[] cItems = sc.nextLine().split(" ");
         sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
         for (int i = 0; i < n; i++) {
             int cItem = Integer.parseInt(cItems[i]);
-            value[i] = cItem;
+            value[i] = cItem; // value 값 저장
+            lines.put(i, new ArrayList<>()); // edge 관계 map 초기화
         }
 
         cItems = sc.nextLine().split(" ");
@@ -152,34 +157,52 @@ public class Solution {
 
         for (int i = 0; i < n; i++) {
             int cItem = Integer.parseInt(cItems[i]);
-
-            color[i] = cItem == 0 ? Color.RED : Color.GREEN;
+            color[i] = cItem == 0 ? Color.RED : Color.GREEN;  // color 값 저장
         }
-
-        Map<String, List<String>> lines = new HashMap<>();
         for (int i = 0; i < n - 1; i++) {
-            String[] line = sc.nextLine().split(" ");
-            List<String> edges;
-            if (lines.containsKey(line[0])) {
-                edges = lines.get(line[0]);
-            } else {
-               edges = new ArrayList<>();
-            }
-            edges.add(line[1]);
-            lines.put(line[0], edges);
+            cItems = sc.nextLine().split(" ");
+            Integer node1 = Integer.parseInt(cItems[0]) - 1;
+            Integer node2 = Integer.parseInt(cItems[1]) - 1;
+
+            lines.get(node1).add(node2);
+            lines.get(node2).add(node1);
         }
 
-        TreeNode root = new TreeNode(value[0], color[0], 0);
-        for (int i = 1; i < n ; i++) {
-            List<String> edges = lines.get(String.valueOf(value[i]));
-
-            int depth = edges.contains(String.valueOf(root.getValue())) ? 1 : 2;
-            TreeNode tree = new TreeNode(value[i], color[i], depth);
-            root.addChild(tree);
-        }
-        return root;
+        return makeTree();
     }
 
+    private static boolean[] trace;
+
+    private static Tree makeTree() {
+        if (lines.get(0).isEmpty())
+            return new TreeLeaf(value[0], color[0], 0);
+        else {
+            trace = new boolean[value.length];
+            return dfsTree(0, 0);
+        }
+    }
+
+    private static Tree dfsTree(int i, int depth) {
+        trace[i] = true;
+
+        List<Tree> childs = new ArrayList<>();
+        for (int childValue : lines.get(i)) {
+            if(!trace[childValue]) {
+                childs.add(dfsTree(childValue, depth + 1));
+            }
+        }
+
+        if (childs.isEmpty()) {
+            return new TreeLeaf(value[i], color[i], depth);
+        } else {
+            TreeNode me = new TreeNode(value[i], color[i], depth + 1);
+            for (Tree child : childs) {
+                me.addChild(child);
+            }
+
+            return me;
+        }
+    }
 
     public static void main(String[] args) {
         Tree root = solve();
