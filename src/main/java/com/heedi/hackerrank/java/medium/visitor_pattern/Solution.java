@@ -83,47 +83,58 @@ abstract class TreeVis {
 }
 
 class SumInLeavesVisitor extends TreeVis {
+    private int result = 0;
+
     public int getResult() {
-        //implement this
-        return 0;
+        return result;
     }
 
     public void visitNode(TreeNode node) {
-        //implement this
     }
 
     public void visitLeaf(TreeLeaf leaf) {
-        //implement this
+        result += leaf.getValue();
     }
 }
 
 class ProductOfRedNodesVisitor extends TreeVis {
+    private int result = 1;
+
     public int getResult() {
-        //implement this
-        return 1;
+        return result;
     }
 
     public void visitNode(TreeNode node) {
-        //implement this
+        if(node.getColor().equals(Color.RED)) {
+            result *= node.getValue();
+        }
     }
 
     public void visitLeaf(TreeLeaf leaf) {
-        //implement this
+        if(leaf.getColor().equals(Color.RED)) {
+            result *= leaf.getValue();
+        }
     }
 }
 
 class FancyVisitor extends TreeVis {
+    private int leafValue = 0;
+    private int rootValue = 0;
+
     public int getResult() {
-        //implement this
-        return 0;
+        return Math.abs(rootValue - leafValue);
     }
 
     public void visitNode(TreeNode node) {
-        //implement this
+        if(node.getDepth() == 1) {
+            rootValue = node.getValue();
+        }
     }
 
     public void visitLeaf(TreeLeaf leaf) {
-        //implement this
+        if(leaf.getColor().equals(Color.GREEN)) {
+            leafValue += leaf.getValue();
+        }
     }
 }
 
