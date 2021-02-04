@@ -98,11 +98,11 @@ class SumInLeavesVisitor extends TreeVis {
 }
 
 class ProductOfRedNodesVisitor extends TreeVis {
-    private static int M = 1000000007;
-    private int result = 1;
+    private static final int M = 1000000007;
+    private long result = 1;
 
     public int getResult() {
-        return result;
+        return (int) result;
     }
 
     /*
@@ -122,22 +122,22 @@ class ProductOfRedNodesVisitor extends TreeVis {
 }
 
 class FancyVisitor extends TreeVis {
-    private int leafValue = 0;
-    private int rootValue = 0;
+    private int evenRootValue = 0;
+    private int greenLeafValue = 0;
 
     public int getResult() {
-        return Math.abs(rootValue - leafValue);
+        return Math.abs(evenRootValue - greenLeafValue);
     }
 
     public void visitNode(TreeNode node) {
-        if(node.getDepth() % 2 == 1) {
-            rootValue = node.getValue();
+        if(node.getDepth() % 2 == 0) {
+            evenRootValue += node.getValue();
         }
     }
 
     public void visitLeaf(TreeLeaf leaf) {
         if(leaf.getColor().equals(Color.GREEN)) {
-            leafValue += leaf.getValue();
+            greenLeafValue += leaf.getValue();
         }
     }
 }
@@ -164,7 +164,7 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             int cItem = Integer.parseInt(cItems[i]);
             value[i] = cItem; // value 값 저장
-            lines.put(i, new ArrayList<>()); // edge 관계 map 초기화
+            lines.put(i, new ArrayList<>()); // edge 관계 map 초기화 (java7 not support diamond)
         }
 
         cItems = sc.nextLine().split(" ");
@@ -210,7 +210,7 @@ public class Solution {
         if (childs.isEmpty()) {
             return new TreeLeaf(value[i], color[i], depth);
         } else {
-            TreeNode me = new TreeNode(value[i], color[i], depth + 1);
+            TreeNode me = new TreeNode(value[i], color[i], depth);
             for (Tree child : childs) {
                 me.addChild(child);
             }
