@@ -37,7 +37,11 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Beautiful Triplets | 20 | 90.48% | [BeautifulTripletsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/BeautifulTripletsTest.java) |
 | Between Two Sets | 10 | 89.16% | [BetweenTwoSetsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/BetweenTwoSetsTest.java) |
 | Big Sorting | 20 | 62.69% | [BigSortingTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/BigSortingTest.java) |
-|  |  |  | 
+| Bill Division | 10 | 97.85% | [BillDivisionTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/BillDivisionTest.java) |
+| Breaking the Records | 10 | 98.38% | [BreakingTheRecordsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/BreakingTheRecordsTest.java) |
+| CatsAndMouseTest | 15 | 97.96% | [CatsAndMouseTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/CatsAndMouseTest.java) |
+| ClosestNumberTest | 35 | 88.20% | [ClosestNumberTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/ClosestNumberTest.java) |
+|  |  |  |  |
 
 
 #### medium
