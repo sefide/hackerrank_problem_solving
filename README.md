@@ -6,9 +6,9 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 - Easy, Medium, Hard 난이도 별로 패키징 (아직까지 Hard를 풀어본 적 없음..)
 
 #### 현재 score
-- Rank: 142154
-- Points: 873.67/2200
-- 5 star (2%)
+- Rank: 75954
+- Points: 1303.67/2200
+- 5 star (34%)
 
 
 #### Skills
@@ -41,6 +41,10 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Breaking the Records | 10 | 98.38% | [BreakingTheRecordsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/BreakingTheRecordsTest.java) |
 | CatsAndMouseTest | 15 | 97.96% | [CatsAndMouseTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/CatsAndMouseTest.java) |
 | ClosestNumberTest | 35 | 88.20% | [ClosestNumberTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/ClosestNumberTest.java) |
+| Counting Valleys | 15 | 94.64% | [CountingValleyTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/CountingValleyTest.java) |
+| Cut the sticks | 25 | 94.57% | [CutTheStickTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/CutTheStickTest.java) |
+| Day of the Programmer | 15 | 89.44% | [DayOfTheProgrammerTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DayOfTheProgrammerTest.java) |
+| Designer PDF Viewer | 20 | 98.67% | [DesignerPDFViewerTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DesignerPDFViewerTest.java) |
 |  |  |  |  |
 
 
