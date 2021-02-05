@@ -20,26 +20,23 @@ public class AppendAndDeleteTest {
     }
 
     static String appendAndDelete(String s, String t, int k) {
-        int sameCount = 0;
-        for (int i = 0; i < Math.min(s.length(), t.length()); i++) {
-            if (s.charAt(i) == t.charAt(i)) {
-                sameCount++;
+        int sLength = s.length();
+        int tLength = t.length();
+
+        int i;
+        for (i = 0; i < Math.min(s.length(), t.length()); i++) {
+            if (s.charAt(i) != t.charAt(i)) {
+                break;
             }
         }
 
-        int shouldFixCount = (s.length() + t.length() - (2 * sameCount));
-
-        if (shouldFixCount > k) {
-            return NO;
-        }
-        else if (shouldFixCount % 2 == k % 2) {
-            return YES;
-        }
-        else if ((s.length() + t.length() - k) < 0) {
-            return YES;
-        }
-        else {
-            return NO;
+        int shouldFixCount = sLength - i + tLength - i;
+        if (shouldFixCount == k || k >= sLength + tLength) {
+            return "Yes";
+        } else if (shouldFixCount < k && shouldFixCount % 2 == k % 2) {
+            return "Yes";
+        } else {
+            return "No";
         }
     }
 }
