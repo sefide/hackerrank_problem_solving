@@ -145,7 +145,7 @@ class FancyVisitor extends TreeVis {
 public class Solution {
     private static int[] value;
     private static Color[] color;
-    private static Map<Integer, List<Integer>> lines;
+    private static Map<Integer, Set<Integer>> lines;
 
     public static Tree solve() {
         //read the tree from STDIN and return its root as a return value of this function
@@ -158,26 +158,23 @@ public class Solution {
         color = new Color[n];
         lines = new HashMap<>();
 
-        String[] cItems = sc.nextLine().split(" ");
+        String[] values = sc.nextLine().split(" ");
+        sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        String[] colors = sc.nextLine().split(" ");
         sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
         for (int i = 0; i < n; i++) {
-            int cItem = Integer.parseInt(cItems[i]);
-            value[i] = cItem; // value 값 저장
-            lines.put(i, new ArrayList<>()); // edge 관계 map 초기화 (java7 not support diamond)
-        }
-
-        cItems = sc.nextLine().split(" ");
-        sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        for (int i = 0; i < n; i++) {
-            int cItem = Integer.parseInt(cItems[i]);
+            lines.put(i, new HashSet<>()); // edge 관계 map 초기화 (java7 not support diamond)
+            int vItem = Integer.parseInt(values[i]);
+            value[i] = vItem; // value 값 저장
+            int cItem = Integer.parseInt(colors[i]);
             color[i] = cItem == 0 ? Color.RED : Color.GREEN;  // color 값 저장
         }
+
         for (int i = 0; i < n - 1; i++) {
-            cItems = sc.nextLine().split(" ");
-            Integer node1 = Integer.parseInt(cItems[0]) - 1;
-            Integer node2 = Integer.parseInt(cItems[1]) - 1;
+            values = sc.nextLine().split(" ");
+            Integer node1 = Integer.parseInt(values[0]) - 1;
+            Integer node2 = Integer.parseInt(values[1]) - 1;
 
             lines.get(node1).add(node2);
             lines.get(node2).add(node1);
@@ -186,36 +183,33 @@ public class Solution {
         return makeTree();
     }
 
-    private static boolean[] trace;
-
     private static Tree makeTree() {
         if (lines.get(0).isEmpty())
             return new TreeLeaf(value[0], color[0], 0);
         else {
-            trace = new boolean[value.length];
-            return dfsTree(0, 0);
+            TreeNode root = new TreeNode(value[0], color[0], 0);
+            makeChildTree(root, 0);
+            return root;
         }
     }
 
-    private static Tree dfsTree(int i, int depth) {
-        trace[i] = true;
+    private static void makeChildTree(TreeNode parent, int parentIndex) {
+        for (int childIndex : lines.get(parentIndex)) {
+            lines.get(childIndex).remove(parentIndex); // 중복확인 제거
 
-        List<Tree> childs = new ArrayList<>();
-        for (int childValue : lines.get(i)) {
-            if(!trace[childValue]) {
-                childs.add(dfsTree(childValue, depth + 1));
-            }
-        }
-
-        if (childs.isEmpty()) {
-            return new TreeLeaf(value[i], color[i], depth);
-        } else {
-            TreeNode me = new TreeNode(value[i], color[i], depth);
-            for (Tree child : childs) {
-                me.addChild(child);
+            Tree child;
+            Set<Integer> childsOfChild = lines.get(childIndex);
+            if (childsOfChild == null || childsOfChild.isEmpty()) {
+                child = new TreeLeaf(value[childIndex], color[childIndex], parentIndex + 1);
+            } else {
+                child = new TreeNode(value[childIndex], color[childIndex], parentIndex + 1);
             }
 
-            return me;
+            if (child instanceof TreeNode) {
+                makeChildTree((TreeNode) child, childIndex);
+            }
+
+            parent.addChild(child);
         }
     }
 
