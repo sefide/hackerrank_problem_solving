@@ -45,6 +45,12 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Cut the sticks | 25 | 94.57% | [CutTheStickTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/CutTheStickTest.java) |
 | Day of the Programmer | 15 | 89.44% | [DayOfTheProgrammerTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DayOfTheProgrammerTest.java) |
 | Designer PDF Viewer | 20 | 98.67% | [DesignerPDFViewerTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DesignerPDFViewerTest.java) |
+| Divisible Sum Pairs | 10 | 97.58% | [DivisibleSumPairsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DivisibleSumPairsTest.java) |
+| Drawing Book | 10 | 89.63% | [DrawingBookTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DrawingBookTest.java) |
+| Electronics Shop | 15 | 91.69% | [ElectronicsShopTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/ElectronicsShopTest.java) |
+|  |  |  |  |
+| Jumping On The Clouds:Revisited | 15 | 96.21% | [JumpingOnTheCloudsRevisitedTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsRevisitedTest.java) |
+| Jumping On The Clouds | 20 | 93.74% | [JumpingOnTheCloudsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsTest.java) |
 |  |  |  |  |
 
 
