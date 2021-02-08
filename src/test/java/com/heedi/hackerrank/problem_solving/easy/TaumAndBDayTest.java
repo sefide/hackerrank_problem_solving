@@ -20,15 +20,8 @@ public class TaumAndBDayTest {
     }
 
     public static long taumBday(int b, int w, int bc, int wc, int z) {
-        if (bc > wc + z) {
-            return (b + w) * wc + b * z;
-        }
 
-        if (wc > bc + z) {
-            return (b + w) * bc + w * z;
-        }
-
-        return (b * bc) + (w * wc);
+        return b * Math.min(bc, wc + z) + w * Math.min(wc, bc + z);
     }
 
 }
