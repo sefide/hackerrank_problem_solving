@@ -9,7 +9,6 @@ public class TaumAndBDayTest {
 
     @Test
     void test() {
-        // Taum and B'day , 25, 89.40%
         int b = 3;
         int w = 6;
         int bc = 1;
@@ -20,7 +19,6 @@ public class TaumAndBDayTest {
     }
 
     public static long taumBday(int b, int w, int bc, int wc, int z) {
-
         return b * Math.min(bc, wc + z) + w * Math.min(wc, bc + z);
     }
 
