@@ -48,9 +48,13 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Divisible Sum Pairs | 10 | 97.58% | [DivisibleSumPairsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DivisibleSumPairsTest.java) |
 | Drawing Book | 10 | 89.63% | [DrawingBookTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DrawingBookTest.java) |
 | Electronics Shop | 15 | 91.69% | [ElectronicsShopTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/ElectronicsShopTest.java) |
+| Equalize The Array | 20 | 93.94% | [EqualizeTheArray.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/EqualizeTheArray.java) |
+| Find Digits | 25 | 96.58% | [FindDigitsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/FindDigitsTest.java) |
+| Grading Students | 10 | 96.53% | [GradingStudentTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/GradingStudentTest.java) |
 |  |  |  |  |
 | Jumping On The Clouds:Revisited | 15 | 96.21% | [JumpingOnTheCloudsRevisitedTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsRevisitedTest.java) |
 | Jumping On The Clouds | 20 | 93.74% | [JumpingOnTheCloudsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsTest.java) |
+| Taum and B'day | 25 | 89.40% | [TaumAndBDayTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/TaumAndBDayTest.java) |
 |  |  |  |  |
 
 
