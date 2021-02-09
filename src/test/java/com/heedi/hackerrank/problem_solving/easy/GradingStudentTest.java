@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * https://www.hackerrank.com/challenges/grading/problem
+ */
 public class GradingStudentTest {
     @Test
     void test() {
