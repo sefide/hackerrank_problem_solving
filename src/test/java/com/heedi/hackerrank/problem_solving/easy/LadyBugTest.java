@@ -2,6 +2,9 @@ package com.heedi.hackerrank.problem_solving.easy;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * https://www.hackerrank.com/challenges/happy-ladybugs/problem
+ */
 public class LadyBugTest {
     private static final String EMPTY_STRING = "_";
 
