@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * https://www.hackerrank.com/challenges/picking-numbers/problem
+ */
 public class PickingNumbersTest {
 
     @Test
