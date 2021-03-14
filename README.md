@@ -55,12 +55,12 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Jumping On The Clouds | 20 | 93.74% | [JumpingOnTheCloudsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsTest.java) |
 | Jumping On The Clouds | 20 | 93.74% | [JumpingOnTheCloudsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsTest.java) |
 | Happy ladyBugs | 30 | 83.94% | [LadyBugTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/LadyBugTest.java) |
-| Migratory Birds | 10 | 91.295 | [MigratoryBirdTest](src/test/java/com/heedi/hackerrank/problem_solving/easy/MigratoryBirdTest.java) |
-| Minimum Distances | 20 | 93.64% | [MinimumDistanceTest](src/test/java/com/heedi/hackerrank/problem_solving/easy/MinimumDistanceTest.java) |
-| Missing Numbers | 45 | 83.18% | [MissingNumbersTest](src/test/java/com/heedi/hackerrank/problem_solving/easy/MissingNumbersTest.java) |
-| Number Line Jumps | 10 | 88.90% | [NumberLineJumpTest](src/test/java/com/heedi/hackerrank/problem_solving/easy/NumberLineJumpTest.java) |
-| Picking Numbers | 20 | 89.56% | [PickingNumbersTest](src/test/java/com/heedi/hackerrank/problem_solving/easy/PickingNumbersTest.java) |
-| Repeated String | 20 | 89.90% | [RepeatedString](src/test/java/com/heedi/hackerrank/problem_solving/easy/RepeatedString.java) |
+| Migratory Birds | 10 | 91.295 | [MigratoryBirdTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/MigratoryBirdTest.java) |
+| Minimum Distances | 20 | 93.64% | [MinimumDistanceTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/MinimumDistanceTest.java) |
+| Missing Numbers | 45 | 83.18% | [MissingNumbersTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/MissingNumbersTest.java) |
+| Number Line Jumps | 10 | 88.90% | [NumberLineJumpTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/NumberLineJumpTest.java) |
+| Picking Numbers | 20 | 89.56% | [PickingNumbersTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/PickingNumbersTest.java) |
+| Repeated String | 20 | 89.90% | [RepeatedString.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/RepeatedString.java) |
 |  |  |  |  |
 | Taum and B'day | 25 | 89.40% | [TaumAndBDayTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/TaumAndBDayTest.java) |
 |  |  |  |  |
