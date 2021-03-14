@@ -48,9 +48,21 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Divisible Sum Pairs | 10 | 97.58% | [DivisibleSumPairsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DivisibleSumPairsTest.java) |
 | Drawing Book | 10 | 89.63% | [DrawingBookTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/DrawingBookTest.java) |
 | Electronics Shop | 15 | 91.69% | [ElectronicsShopTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/ElectronicsShopTest.java) |
-|  |  |  |  |
+| Equalize The Array | 20 | 93.94% | [EqualizeTheArray.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/EqualizeTheArray.java) |
+| Find Digits | 25 | 96.58% | [FindDigitsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/FindDigitsTest.java) |
+| Grading Students | 10 | 96.53% | [GradingStudentTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/GradingStudentTest.java) |
 | Jumping On The Clouds:Revisited | 15 | 96.21% | [JumpingOnTheCloudsRevisitedTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsRevisitedTest.java) |
 | Jumping On The Clouds | 20 | 93.74% | [JumpingOnTheCloudsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsTest.java) |
+| Jumping On The Clouds | 20 | 93.74% | [JumpingOnTheCloudsTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/JumpingOnTheCloudsTest.java) |
+| Happy ladyBugs | 30 | 83.94% | [LadyBugTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/LadyBugTest.java) |
+| Migratory Birds | 10 | 91.295 | [MigratoryBirdTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/MigratoryBirdTest.java) |
+| Minimum Distances | 20 | 93.64% | [MinimumDistanceTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/MinimumDistanceTest.java) |
+| Missing Numbers | 45 | 83.18% | [MissingNumbersTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/MissingNumbersTest.java) |
+| Number Line Jumps | 10 | 88.90% | [NumberLineJumpTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/NumberLineJumpTest.java) |
+| Picking Numbers | 20 | 89.56% | [PickingNumbersTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/PickingNumbersTest.java) |
+| Repeated String | 20 | 89.90% | [RepeatedString.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/RepeatedString.java) |
+|  |  |  |  |
+| Taum and B'day | 25 | 89.40% | [TaumAndBDayTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/TaumAndBDayTest.java) |
 |  |  |  |  |
 
 
