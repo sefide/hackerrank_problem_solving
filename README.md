@@ -61,6 +61,9 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Number Line Jumps | 10 | 88.90% | [NumberLineJumpTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/NumberLineJumpTest.java) |
 | Picking Numbers | 20 | 89.56% | [PickingNumbersTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/PickingNumbersTest.java) |
 | Repeated String | 20 | 89.90% | [RepeatedString.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/RepeatedString.java) |
+| Sales by Match | 10 | 91.81% | [SalesByMatchTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/SalesByMatchTest.java) |
+| Save the Prisoner! | 15 | 79.95% | [SaveThePrisonerTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/SaveThePrisonerTest.java) |
+| Sequence Equation | 20 | 97.05% | [SequenceEquationTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/SequenceEquationTest.java) |
 |  |  |  |  |
 | Taum and B'day | 25 | 89.40% | [TaumAndBDayTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/TaumAndBDayTest.java) |
 |  |  |  |  |
