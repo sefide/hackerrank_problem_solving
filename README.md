@@ -66,6 +66,7 @@ HackerRank에서 Practice - Problem Solving 문제 풀이 모음 (Java)
 | Sequence Equation | 20 | 97.05% | [SequenceEquationTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/SequenceEquationTest.java) |
 | Subarray Division | 10 | 93.69% | [SubArrayDivisionTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/SubArrayDivisionTest.java) |
 | Taum and B'day | 25 | 89.40% | [TaumAndBDayTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/TaumAndBDayTest.java) |
+| Halloween Sale | 30 | 90.54% | [HalloweenSaleTest.java](src/test/java/com/heedi/hackerrank/problem_solving/easy/HalloweenSaleTest.java] |
 |  |  |  |  |
 |  |  |  |  |
 
